@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import { useState } from 'react'
 import { Button, ShoeCard } from '../components'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { statistics } from '@/utills/statistics'
@@ -6,12 +8,13 @@ import Image from 'next/image'
 import { shoes } from '@/utills/shoes'
 
 const Hero = () => {
+	const [currentBigImg, setCurrentBigImg] = useState('/images/big-shoe1.png')
 	return (
 		<section className='xl:padding-l wide:padding-r padding-b'>
-			{/* Left Section */}
 			<div
 				id='home'
 				className='w-full min-h-screen p-2 flex flex-col xl:flex-row justify-center gap-10 max-container'>
+				{/* Left Section */}
 				<div className='relative w-full xl:w-2/5 max-xl:padding-x pt-28 flex flex-col justify-center items-start'>
 					<p className='text-xl font-montserrat text-coral-red'>
 						{' '}
@@ -52,19 +55,25 @@ const Hero = () => {
 				{/* Right Section */}
 				<div className='relative xl:min-h-screen max-xl:py-40 flex-1 flex justify-center items-center bg-primary bg-hero bg-cover bg-center'>
 					<Image
-						src='/images/big-shoe1.png'
+						src={currentBigImg}
 						alt='shoe colletion'
 						width={610}
 						height={502}
 						className='object-contain relative z-10'
 					/>
 
-					<div className=''>
-						<div className=''>
-							{shoes.map(({ id, bigShoe }) => (
-								<ShoeCard key={id} />
-							))}
-						</div>
+					<div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
+						{shoes.map(({ id, bigShoe }) => (
+							<div className='' key={id}>
+								<ShoeCard
+									imgUrl={bigShoe}
+									bigShoeImg={currentBigImg}
+									changeBigShoeImg={(imgUrl: string) => {
+										setCurrentBigImg(imgUrl)
+									}}
+								/>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
