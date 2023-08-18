@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../components'
 import { AiOutlineArrowRight } from 'react-icons/ai'
+import { statistics } from '@/utills/statistics'
 
 const Hero = () => {
 	return (
@@ -22,6 +23,15 @@ const Hero = () => {
 					</p>
 
 					<Button label='Shop Now' Icon={AiOutlineArrowRight} />
+
+					<div className='w-full mt-20 flex justify-start items-start flex-wrap gap-16'>
+						{statistics.map((stat, idx) => (
+							<div key={idx} className=''>
+								<p className=''> {stat.value} </p>
+								<p className=''> {stat.label} </p>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
