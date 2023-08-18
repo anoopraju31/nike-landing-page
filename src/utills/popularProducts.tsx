@@ -1,4 +1,10 @@
-export const products = [
+export type Product = {
+	imgURL: string
+	name: string
+	price: string
+}
+
+export const products: Product[] = [
 	{
 		imgURL: '/images/shoe4.svg',
 		name: 'Nike Air Jordan-01',
