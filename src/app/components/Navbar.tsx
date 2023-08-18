@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 import { navLinks } from '@/utills/navLinks'
 
@@ -27,6 +28,10 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
+
+				<div className='hidden max-lg:block'>
+					<RxHamburgerMenu size={20} />
+				</div>
 			</nav>
 		</header>
 	)
