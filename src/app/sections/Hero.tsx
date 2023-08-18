@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../components'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const Hero = () => {
 	return (
@@ -20,7 +21,7 @@ const Hero = () => {
 						your active life.
 					</p>
 
-					<Button />
+					<Button label='Shop Now' Icon={AiOutlineArrowRight} />
 				</div>
 			</div>
 		</section>
