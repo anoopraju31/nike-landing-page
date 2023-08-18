@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Hero } from './sections'
+import { Hero, PopularProducts } from './sections'
 
 export default function Home() {
 	return (
@@ -7,6 +7,7 @@ export default function Home() {
 			{/* Hero Section */}
 			<Hero />
 			{/* Popular Products */}
+			<PopularProducts />
 			{/* Super Quailty */}
 			{/* Services */}
 			{/* Special Offers */}

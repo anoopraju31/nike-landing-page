@@ -18,7 +18,7 @@ const ShoeCard = ({ imgUrl, bigShoeImg, changeBigShoeImg }: Props) => {
 				bigShoeImg === imgUrl ? 'border-coral-red' : 'border-transparent'
 			} cursor-pointer max-sm:flex-1`}
 			onClick={handleClick}>
-			<div className='sm:w-40 sm:h-40 flex max-sm:flex-1 justify-center items-center bg-card bg-center bg-cover rounded-xl'>
+			<div className='sm:w-40 sm:h-40 p-2 flex max-sm:flex-1 justify-center items-center bg-card bg-center bg-cover rounded-xl'>
 				<Image
 					src={imgUrl}
 					alt={imgUrl}
