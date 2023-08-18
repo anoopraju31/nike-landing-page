@@ -1,12 +1,17 @@
 import Image from 'next/image'
+import { Hero } from './sections'
 
 export default function Home() {
 	return (
-		<main>
-			<h1 className='text-xl font-bold underline text-center'>
-				{' '}
-				Hello World!{' '}
-			</h1>
+		<main className=''>
+			{/* Hero Section */}
+			<Hero />
+			{/* Popular Products */}
+			{/* Super Quailty */}
+			{/* Services */}
+			{/* Special Offers */}
+			{/* Customer Reviews */}
+			{/* Subscribe */}
 		</main>
 	)
 }
